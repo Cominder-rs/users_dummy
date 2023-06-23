@@ -1,0 +1,20 @@
+syntax = "proto3";
+package users_dummy;
+import "google/protobuf/empty.proto";
+
+service UsersDummyV1 {
+  rpc GetUserById (UserId) returns (User) {}
+}
+
+message UserId {
+  int64 id = 1;
+}
+
+message User {
+  int64 id = 1;
+  string username = 2;
+  string phone_number = 3;
+  string firstname = 4;
+  string lastname = 5;
+  string city = 6;
+}
